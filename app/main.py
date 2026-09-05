@@ -14,7 +14,7 @@ app = FastAPI(title="NexusPay Agentic Gateway")
 @app.on_event("startup")
 async def startup_event() -> None:
     """Warm the embedding model into memory during server boot."""
-    load_embedding_model()
+    # load_embedding_model()
 
 
 app.add_middleware(
