@@ -1,0 +1,21 @@
+/* Tailwind handles the visual styling; this file is intentionally minimal. */
+
+@keyframes success-check {
+	0% { transform: scale(0.5) rotate(-12deg); opacity: 0; }
+	70% { transform: scale(1.08) rotate(3deg); opacity: 1; }
+	100% { transform: scale(1) rotate(0); }
+}
+
+@keyframes success-confetti {
+	0% { transform: translateY(-24px) scale(0.2); opacity: 0; }
+	25% { opacity: 1; }
+	100% { transform: translateY(230px) scale(1); opacity: 0; }
+}
+
+.success-check { animation: success-check 700ms cubic-bezier(.2,.8,.2,1) both; }
+.success-sparkle { position: absolute; top: -0.2em; right: -0.55em; color: #f6c453; font-size: 0.38em; animation: success-check 900ms 250ms both; }
+.success-confetti span { position: absolute; top: 5%; left: calc(var(--i, 1) * 5%); width: 6px; height: 15px; background: #f6c453; transform: rotate(25deg); animation: success-confetti 1500ms calc(var(--i, 1) * 35ms) ease-out both; }
+.success-confetti span:nth-child(3n) { background: #f0b94b; height: 8px; border-radius: 50%; }
+.success-confetti span:nth-child(3n + 1) { background: #8be3bd; transform: rotate(70deg); }
+.success-confetti span:nth-child(2n) { left: calc(var(--i, 1) * 5% + 3%); }
+.success-confetti span:nth-child(1) { --i: 1; }.success-confetti span:nth-child(2) { --i: 2; }.success-confetti span:nth-child(3) { --i: 3; }.success-confetti span:nth-child(4) { --i: 4; }.success-confetti span:nth-child(5) { --i: 5; }.success-confetti span:nth-child(6) { --i: 6; }.success-confetti span:nth-child(7) { --i: 7; }.success-confetti span:nth-child(8) { --i: 8; }.success-confetti span:nth-child(9) { --i: 9; }.success-confetti span:nth-child(10) { --i: 10; }.success-confetti span:nth-child(11) { --i: 11; }.success-confetti span:nth-child(12) { --i: 12; }.success-confetti span:nth-child(13) { --i: 13; }.success-confetti span:nth-child(14) { --i: 14; }.success-confetti span:nth-child(15) { --i: 15; }.success-confetti span:nth-child(16) { --i: 16; }.success-confetti span:nth-child(17) { --i: 17; }.success-confetti span:nth-child(18) { --i: 18; }

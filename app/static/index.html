@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NexusPay Agentic Gateway</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div class="brand-lockup">
+        <span class="brand-mark" aria-hidden="true">N</span>
+        <div>
+          <p class="eyebrow">Agentic commerce gateway</p>
+          <h1>NexusPay</h1>
+        </div>
+      </div>
+      <div class="status-pill"><span class="status-dot"></span> Test mode</div>
+    </header>
+
+    <section class="dashboard-grid" aria-label="NexusPay checkout dashboard">
+      <section class="chat-panel">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Buyer agent</p>
+            <h2>What are you looking for?</h2>
+          </div>
+          <span class="step-count">01 / 03</span>
+        </div>
+
+        <div id="conversation" class="conversation" aria-live="polite">
+          <div class="message agent-message">
+            <span class="message-label">NexusPay agent</span>
+            <p>Tell me what you need and I will check the catalog, apply the guardrails, and prepare the order.</p>
+          </div>
+        </div>
+
+        <form id="checkout-form" class="checkout-form">
+          <label for="prompt">Order request</label>
+          <div class="input-row">
+            <input id="prompt" name="prompt" type="text" autocomplete="off" placeholder="Try: Buy the premium monitor" required>
+            <button id="send-button" type="submit"><span>Send</span><span aria-hidden="true">&#8599;</span></button>
+          </div>
+          <div class="suggestions" aria-label="Example requests">
+            <button type="button" class="suggestion" data-prompt="Buy a mechanical keyboard">Mechanical keyboard</button>
+            <button type="button" class="suggestion" data-prompt="Buy the premium monitor">Premium monitor</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="terminal-panel">
+        <div class="terminal-heading">
+          <div>
+            <p class="eyebrow">Live transaction trace</p>
+            <h2>Audit terminal</h2>
+          </div>
+          <span id="guardrail-badge" class="guardrail-badge neutral">Awaiting request</span>
+        </div>
+        <div class="terminal-window">
+          <div class="terminal-bar"><span></span><span></span><span></span><small>checkout_response.json</small></div>
+          <pre id="json-output" aria-live="polite">{
+  "status": "ready",
+  "message": "Submit an order to inspect the typed response."
+}</pre>
+        </div>
+        <div id="outcome" class="outcome-card neutral">
+          <span class="outcome-icon" aria-hidden="true">+</span>
+          <div>
+            <strong>System ready</strong>
+            <p>The audit trace will appear here after checkout.</p>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+  <script src="/static/app.js" defer></script>
+</body>
+</html>
