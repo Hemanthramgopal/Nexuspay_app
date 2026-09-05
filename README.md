@@ -11,7 +11,7 @@ Standard e-commerce checkouts are static and rigid. **NexusPay** introduces an a
 
 ## 🏗️ System Architecture
 
-![Architecture Overview](image1.png)
+![Architecture Overview](architecture.png)
 *System architecture detailing the flow from user input through the AI agent layer to Razorpay checkout.*
 
 Our architecture decouples LLM generation from deterministic transaction logic to ensure fintech-grade security and state management.
