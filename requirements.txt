@@ -6,3 +6,4 @@ google-genai
 razorpay
 httpx
 openai
+numpy
