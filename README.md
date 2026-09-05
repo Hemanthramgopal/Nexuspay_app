@@ -42,7 +42,7 @@ While the AI handles the conversation, the transaction is governed by hard-coded
 ### 7. Razorpay Payment Layer
 Only after strict cryptographic and logical verification does the system create a Razorpay order and payment link. The final negotiated price is independently re-verified against the database floor before order creation.
 
-![Mermaid Flow](mermaid-diagram.jpg)
+![Mermaid Flow](mermaid-diagram.png)
 *Detailed state machine and agent routing flow.*
 
 ---
